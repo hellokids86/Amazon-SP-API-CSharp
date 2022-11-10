@@ -63,7 +63,21 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.Orders
             /// Enum CA_MPF for value: CA_MPF
             /// </summary>
             [EnumMember(Value = "CA_MPF")]
-            CA_MPF = 5
+            CA_MPF = 5,
+
+
+            /// <summary>
+            /// Enum NZ_VOEC for value: NZ_VOEC
+            /// </summary>
+            [EnumMember(Value = "NZ_VOEC")]
+            NZ_VOEC = 6,
+
+            /// <summary>
+            /// Enum AU_VOEC for value: NZ_VOEC
+            /// </summary>
+            [EnumMember(Value = "AU_VOEC")]
+            AU_VOEC = 7
+            
         }
 
         /// <summary>
