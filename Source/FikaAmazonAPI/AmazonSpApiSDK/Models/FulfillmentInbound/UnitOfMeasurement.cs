@@ -24,12 +24,18 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.FulfillmentInbound
     public enum UnitOfMeasurement
     {
 
+        [EnumMember(Value = "IN")]
+        IN = 1,
         /// <summary>
         /// Enum Inches for value: inches
         /// </summary>
+        /// 
+
         [EnumMember(Value = "inches")]
         Inches = 1,
 
+
+ 
         /// <summary>
         /// Enum Centimeters for value: centimeters
         /// </summary>
