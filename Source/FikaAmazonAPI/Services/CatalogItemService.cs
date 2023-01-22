@@ -141,10 +141,12 @@ namespace FikaAmazonAPI.Services
         }
 
 
-        public IList<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item> SearchCatalogItems202204(ParameterSearchCatalogItems202204 parameterSearchCatalogItems) =>
-            Task.Run(() => SearchCatalogItems202204Async(parameterSearchCatalogItems)).ConfigureAwait(false).GetAwaiter().GetResult();
 
-        public async Task<IList<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item>> SearchCatalogItems202204Async(ParameterSearchCatalogItems202204 parameter)
+
+        public ItemSearchResults SearchCatalogItems202204(ParameterSearchCatalogItems202204 parameterSearchCatalogItems) =>
+    Task.Run(() => SearchCatalogItems202204Async(parameterSearchCatalogItems)).ConfigureAwait(false).GetAwaiter().GetResult();
+
+        public async Task<ItemSearchResults> SearchCatalogItems202204Async(ParameterSearchCatalogItems202204 parameter)
         {
             if (parameter.identifiers != null && parameter.identifiers.Count > 20)
                 throw new InvalidDataException("identifiers max count 20");
@@ -157,13 +159,28 @@ namespace FikaAmazonAPI.Services
                 parameter.marketplaceIds.Add(AmazonCredential.MarketPlace.ID);
             }
 
-            List<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item> list = new List<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item>();
 
             var param = parameter.getParameters();
 
             await CreateAuthorizedRequestAsync(CategoryApiUrls.SearchCatalogItems202204, RestSharp.Method.GET, param);
             var response = await ExecuteRequestAsync<ItemSearchResults>(RateLimitType.CatalogItems20220401_SearchCatalogItems);
+            return response;
+        }
+
+
+
+
+        public IList<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item> SearchCatalogItems202204_AllPages(ParameterSearchCatalogItems202204 parameterSearchCatalogItems) =>
+            Task.Run(() => SearchCatalogItems202204Async_AllPages(parameterSearchCatalogItems)).ConfigureAwait(false).GetAwaiter().GetResult();
+
+        public async Task<IList<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item>> SearchCatalogItems202204Async_AllPages(ParameterSearchCatalogItems202204 parameter)
+        {
+
+            List<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item> list = new List<AmazonSpApiSDK.Models.CatalogItems.V20220401.Item>();
+
+            var response = await SearchCatalogItems202204Async(parameter);
             list.AddRange(response.Items);
+
             var totalPages = 1;
             if (response.Pagination != null && !string.IsNullOrEmpty(response.Pagination.NextToken))
             {
