@@ -28,13 +28,13 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.FulfillmentInbound
         /// Gets or Sets SellerFreightClass
         /// </summary>
         [DataMember(Name = "SellerFreightClass", EmitDefaultValue = false)]
-        public SellerFreightClass? SellerFreightClass { get; set; }
+        public string SellerFreightClass { get; set; }
         /// <summary>
         /// The freight class of the shipment as estimated by Amazon if you did not include a freight class when you called the putTransportDetails operation.
         /// </summary>
         /// <value>The freight class of the shipment as estimated by Amazon if you did not include a freight class when you called the putTransportDetails operation.</value>
         [DataMember(Name = "PreviewFreightClass", EmitDefaultValue = false)]
-        public SellerFreightClass PreviewFreightClass { get; set; }
+        public string PreviewFreightClass { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="PartneredLtlDataOutput" /> class.
         /// </summary>
@@ -58,7 +58,7 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.FulfillmentInbound
         /// <param name="IsBillOfLadingAvailable">Indicates whether the bill of lading for the shipment is available. (required).</param>
         /// <param name="PartneredEstimate">The estimated shipping cost using an Amazon-partnered carrier..</param>
         /// <param name="CarrierName">The carrier for the inbound shipment. (required).</param>
-        public PartneredLtlDataOutput(Contact Contact = default(Contact), int BoxCount = default(int), SellerFreightClass? SellerFreightClass = default(SellerFreightClass?), string FreightReadyDate = default(string), PalletList PalletList = default(PalletList), Weight TotalWeight = default(Weight), Amount SellerDeclaredValue = default(Amount), Amount AmazonCalculatedValue = default(Amount), string PreviewPickupDate = default(string), string PreviewDeliveryDate = default(string), SellerFreightClass PreviewFreightClass = default(SellerFreightClass), string AmazonReferenceId = default(string), bool? IsBillOfLadingAvailable = default(bool?), PartneredEstimate PartneredEstimate = default(PartneredEstimate), string CarrierName = default(string))
+        public PartneredLtlDataOutput(Contact Contact = default(Contact), int BoxCount = default(int), string SellerFreightClass = default(string), string FreightReadyDate = default(string), PalletList PalletList = default(PalletList), Weight TotalWeight = default(Weight), Amount SellerDeclaredValue = default(Amount), Amount AmazonCalculatedValue = default(Amount), string PreviewPickupDate = default(string), string PreviewDeliveryDate = default(string), string PreviewFreightClass = default(string), string AmazonReferenceId = default(string), bool? IsBillOfLadingAvailable = default(bool?), PartneredEstimate PartneredEstimate = default(PartneredEstimate), string CarrierName = default(string))
         {
             // to ensure "Contact" is required (not null)
             if (Contact == null)
