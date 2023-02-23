@@ -82,7 +82,11 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.FulfillmentInbound
         /// Enum CHECKEDIN for value: CHECKED_IN
         /// </summary>
         [EnumMember(Value = "CHECKED_IN")]
-        CHECKEDIN = 10
+        CHECKEDIN = 10,
+
+
+               [EnumMember(Value = "CREATING")]
+        CREATING = 11
     }
 
 }
