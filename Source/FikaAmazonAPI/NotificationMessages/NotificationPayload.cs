@@ -5,6 +5,28 @@ namespace FikaAmazonAPI.NotificationMessages
 {
     public class NotificationPayload
     {
+
+        [JsonProperty("feedProcessingFinishedNotification")]
+        public FeedProcessingFinishedNotification FeedProcessingFinishedNotification { get; set; }
+
+        [JsonProperty("issueType")]
+        public string IssueType { get; set; }
+
+        [JsonProperty("merchantOffer")]
+        public PricingHealth.MerchantOffer MerchantOffer { get; set; }
+
+        [JsonProperty("offerChangeTrigger")]
+        public PricingHealth.OfferChangeTrigger OfferChangeTrigger { get; set; }
+
+        /// <summary>
+        /// The seller identifier for the offer
+        /// </summary>
+        [JsonProperty("sellerId")]
+        public string SellerId { get; set; }
+
+        [JsonProperty("summary")]
+        public PricingHealth.Summary Summary { get; set; }
+
         /// <summary>
         /// An explanation about the purpose of this instance.
         /// </summary>

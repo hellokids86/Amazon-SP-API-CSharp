@@ -81,6 +81,11 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.Orders
             [EnumMember(Value = "SG_VOEC")]
             SG_VOEC = 8
 
+                ,
+
+            [EnumMember(Value = "JE_VOEC")]
+            JE_VOEC = 9
+
         }
 
         /// <summary>
