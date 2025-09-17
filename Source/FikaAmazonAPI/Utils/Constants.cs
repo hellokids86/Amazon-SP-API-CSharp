@@ -100,18 +100,18 @@ namespace FikaAmazonAPI.Utils
         public enum FeedType
         {
             JSON_LISTINGS_FEED,
-            POST_PRODUCT_DATA,
-            POST_INVENTORY_AVAILABILITY_DATA,
-            POST_PRODUCT_OVERRIDES_DATA,
-            POST_PRODUCT_PRICING_DATA,
-            POST_PRODUCT_IMAGE_DATA,
-            POST_PRODUCT_RELATIONSHIP_DATA,
-            POST_FLAT_FILE_INVLOADER_DATA,
-            POST_FLAT_FILE_LISTINGS_DATA,
-            POST_FLAT_FILE_BOOKLOADER_DATA_,
-            POST_FLAT_FILE_CONVERGENCE_LISTINGS_DATA,
-            POST_FLAT_FILE_PRICEANDQUANTITYONLY_UPDATE_DATA,
-            POST_UIEE_BOOKLOADER_DATA,
+            POST_PRODUCT_DATA,  //Deprecated (no refs)
+            POST_INVENTORY_AVAILABILITY_DATA, //**Deprecated  DONE
+            POST_PRODUCT_OVERRIDES_DATA, //**Deprecated  (no refs)
+            POST_PRODUCT_PRICING_DATA, //**Deprecated  (no refs)
+            POST_PRODUCT_IMAGE_DATA, //Deprecated  (no refs)
+            POST_PRODUCT_RELATIONSHIP_DATA, //Deprecated  (no refs)
+            POST_FLAT_FILE_INVLOADER_DATA, //**Deprecated  
+            POST_FLAT_FILE_LISTINGS_DATA, //**Deprecated  WILL NOT CONVERT
+            POST_FLAT_FILE_BOOKLOADER_DATA_, //Deprecated (no refs)
+            POST_FLAT_FILE_CONVERGENCE_LISTINGS_DATA, //Deprecated  (no refs)
+            POST_FLAT_FILE_PRICEANDQUANTITYONLY_UPDATE_DATA, //**Deprecated  DONE
+            POST_UIEE_BOOKLOADER_DATA, //Deprecated  (no refs)
             POST_STD_ACES_DATA,
             POST_ORDER_ACKNOWLEDGEMENT_DATA,
             POST_PAYMENT_ADJUSTMENT_DATA,
