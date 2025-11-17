@@ -18,6 +18,7 @@ namespace FikaAmazonAPI.ConstructFeed
                 MerchantIdentifier = sellerId,
                 DocumentVersion = documentVersion,
             };
+            envelope.noNamespaceSchemaLocation = "amzn-envelope.xsd";
             envelope.PurgeAndReplace = purgeAndReplace;
         }
 

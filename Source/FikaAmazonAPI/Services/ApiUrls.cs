@@ -84,6 +84,238 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Services
             public static string GetFeatureInventory(string featureName) => $"{_resourceBaseUrl}/features/inventory/{featureName}";
             public static string GetFeatureSKU(string featureName, string sellerSku) => $"{_resourceBaseUrl}/features/inventory/{featureName}/{sellerSku}";
         }
+
+
+        protected class FulFillmentInbound2024ApiUrls
+        {
+            private readonly static string _resourceBaseUrl = "/inbound/fba/2024-03-20";
+            public static string inboundPlans
+            {
+                get => $"{_resourceBaseUrl}/inboundPlans";
+            }
+
+            public static string createInboundPlan
+            {
+                get => $"{_resourceBaseUrl}/createInboundPlan";
+            }
+
+            public static string getInboundPlan
+            {
+                get => $"{_resourceBaseUrl}/getInboundPlan";
+            }
+
+            public static string listInboundPlanBoxes
+            {
+                get => $"{_resourceBaseUrl}/listInboundPlanBoxes";
+            }
+
+            public static string cancelInboundPlan
+            {
+                get => $"{_resourceBaseUrl}/cancelInboundPlan";
+            }
+
+            public static string listInboundPlanItems
+            {
+                get => $"{_resourceBaseUrl}/listInboundPlanItems";
+            }
+
+            public static string updateInboundPlanName
+            {
+                get => $"{_resourceBaseUrl}/updateInboundPlanName";
+            }
+
+            public static string listPackingGroupBoxes
+            {
+                get => $"{_resourceBaseUrl}/listPackingGroupBoxes";
+            }
+
+            public static string listPackingGroupItems
+            {
+                get => $"{_resourceBaseUrl}/listPackingGroupItems";
+            }
+
+            public static string setPackingInformation
+            {
+                get => $"{_resourceBaseUrl}/setPackingInformation";
+            }
+
+
+            public static string listPackingOptions
+            {
+                get => $"{_resourceBaseUrl}/listPackingOptions";
+            }
+
+            public static string generatePackingOptions
+            {
+                get => $"{_resourceBaseUrl}/generatePackingOptions";
+            }
+
+            public static string confirmPackingOption
+            {
+                get => $"{_resourceBaseUrl}/confirmPackingOption";
+            }
+
+            public static string listPlacementOptions
+            {
+                get => $"{_resourceBaseUrl}/listPlacementOptions";
+            }
+
+
+            public static string generatePlacementOptions
+            {
+                get => $"{_resourceBaseUrl}/generatePlacementOptions";
+            }
+
+            public static string confirmPlacementOption
+            {
+                get => $"{_resourceBaseUrl}/confirmPlacementOption";
+            }
+
+            public static string getShipment
+            {
+                get => $"{_resourceBaseUrl}/getShipment";
+            }
+
+
+            public static string listShipmentBoxes
+            {
+                get => $"{_resourceBaseUrl}/listShipmentBoxes";
+            }
+
+
+            public static string listShipmentContentUpdatePreviews
+            {
+                get => $"{_resourceBaseUrl}/listShipmentContentUpdatePreviews";
+            }
+
+            public static string generateShipmentContentUpdatePreviews
+            {
+                get => $"{_resourceBaseUrl}/generateShipmentContentUpdatePreviews";
+            }
+
+
+            public static string getShipmentContentUpdatePreview
+            {
+                get => $"{_resourceBaseUrl}/getShipmentContentUpdatePreview";
+            }
+
+            public static string confirmShipmentContentUpdatePreview
+            {
+                get => $"{_resourceBaseUrl}/confirmShipmentContentUpdatePreview";
+            }
+
+
+            public static string getDeliveryChallanDocument
+            {
+                get => $"{_resourceBaseUrl}/getDeliveryChallanDocument";
+            }
+
+            public static string listDeliveryWindowOptions
+            {
+                get => $"{_resourceBaseUrl}/listDeliveryWindowOptions";
+            }
+
+
+            public static string generateDeliveryWindowOptions
+            {
+                get => $"{_resourceBaseUrl}/generateDeliveryWindowOptions";
+            }
+
+            public static string confirmDeliveryWindowOptions
+            {
+                get => $"{_resourceBaseUrl}/confirmDeliveryWindowOptions";
+            }
+
+
+            public static string listShipmentItems
+            {
+                get => $"{_resourceBaseUrl}/listShipmentItems";
+            }
+
+            public static string updateShipmentName
+            {
+                get => $"{_resourceBaseUrl}/updateShipmentName";
+            }
+
+
+            public static string listShipmentPallets
+            {
+                get => $"{_resourceBaseUrl}/listShipmentPallets";
+            }
+
+            public static string cancelSelfShipAppointment
+            {
+                get => $"{_resourceBaseUrl}/cancelSelfShipAppointment";
+            }
+
+
+            public static string getSelfShipAppointmentSlots
+            {
+                get => $"{_resourceBaseUrl}/getSelfShipAppointmentSlots";
+            }
+
+            public static string generateSelfShipAppointmentSlots
+            {
+                get => $"{_resourceBaseUrl}/generateSelfShipAppointmentSlots";
+            }
+
+
+            public static string scheduleSelfShipAppointment
+            {
+                get => $"{_resourceBaseUrl}/scheduleSelfShipAppointment";
+            }
+
+            public static string updateShipmentSourceAddress
+            {
+                get => $"{_resourceBaseUrl}/updateShipmentSourceAddress";
+            }
+
+
+            public static string updateShipmentTrackingDetails
+            {
+                get => $"{_resourceBaseUrl}/updateShipmentTrackingDetails";
+            }
+
+            public static string listTransportationOptions
+            {
+                get => $"{_resourceBaseUrl}/listTransportationOptions";
+            }
+
+            public static string generateTransportationOptions
+            {
+                get => $"{_resourceBaseUrl}/generateTransportationOptions";
+            }
+
+
+            public static string confirmTransportationOptions
+            {
+                get => $"{_resourceBaseUrl}/confirmTransportationOptions";
+            }
+
+            public static string listItemComplianceDetails
+            {
+                get => $"{_resourceBaseUrl}/listItemComplianceDetails";
+            }
+
+            public static string updateItemComplianceDetails
+            {
+                get => $"{_resourceBaseUrl}/updateItemComplianceDetails";
+            }
+
+
+            public static string createMarketplaceItemLabels
+            {
+                get => $"{_resourceBaseUrl}/createMarketplaceItemLabels";
+            }
+
+            public static string getInboundOperationStatus
+            {
+                get => $"{_resourceBaseUrl}/getInboundOperationStatus";
+            }
+          
+
+        }
+
         protected class FulFillmentInboundApiUrls
         {
             private readonly static string _resourceBaseUrl = "/fba/inbound/v0";
@@ -144,6 +376,22 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Services
             public static string PurchaseLabels(string shipmentId) => $"{_resourceBaseUrl}/shipments/{shipmentId}/purchaseLabels";
             public static string RetrieveShippingLabel(string shipmentId, string trackingId) => $"{_resourceBaseUrl}/shipments/{shipmentId}/containers/{trackingId}/label";
             public static string GetTrackingInformation(string trackingId) => $"{_resourceBaseUrl}/tracking/{trackingId}";
+        }
+
+        protected class ShippingApiV2Urls
+        {
+            private readonly static string _resourceBaseUrl = "/shipping/v2";
+            public static string GetRates
+            {
+                get => $"{_resourceBaseUrl}/shipments/rates";
+            }
+            public static string PurchaseShipment
+            {
+                get => $"{_resourceBaseUrl}/shipments";
+            }
+            public static string GetTracking(string carrierId, string trackingId) => $"{_resourceBaseUrl}/tracking?carrierId={carrierId}&trackingId={trackingId}";
+            public static string GetShipmentDocuments(string shipmentId, string packageClientReferenceId, string format) => $"{_resourceBaseUrl}/shipments/{shipmentId}/documents?packageClientReferenceId={packageClientReferenceId}&format={format}";
+            public static string CancelShipment(string shipmentId) => $"{_resourceBaseUrl}/shipments/{shipmentId}/cancel";
         }
         protected class MessaginApiUrls
         {

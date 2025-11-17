@@ -45,13 +45,20 @@ namespace FikaAmazonAPI.ConstructFeed.Messages
         public List<DirectPaymentAdjustments> DirectPaymentAdjustments { get; set; }
     }
 
-    public class AdjustmentBuyerPrice
+
+    public class AdjustmentBuyerPriceComponent
     {
         [XmlElement(ElementName = "Type")]
-        AdjustmentBuyerTypePrice BuyerPriceType { get; set; }
+        public AdjustmentBuyerTypePrice BuyerPriceType { get; set; }
 
         [XmlElement(ElementName = "Amount")]
-        CurrencyAmount Amount { get; set; }
+        public CurrencyAmount Amount { get; set; }
+    }
+
+    public class AdjustmentBuyerPrice
+    {
+        [XmlElement(ElementName = "Component")]
+        public AdjustmentBuyerPriceComponent AdjustmentBuyerPriceComponent { get; set; }
     }
 
     public class PromotionAdjustments

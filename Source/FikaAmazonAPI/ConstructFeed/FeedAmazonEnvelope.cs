@@ -6,9 +6,13 @@ using static FikaAmazonAPI.Utils.Constants;
 namespace FikaAmazonAPI.ConstructFeed
 {
     [XmlRoot(ElementName = "AmazonEnvelope")]
+
     [Serializable]
     public class FeedAmazonEnvelope
     {
+
+        [XmlAttribute(AttributeName = "noNamespaceSchemaLocation", Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
+        public string noNamespaceSchemaLocation { get; set; }
 
         [XmlElement(Order = 1)]
         public FeedHeader Header { get; set; }

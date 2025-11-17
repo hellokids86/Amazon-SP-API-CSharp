@@ -86,7 +86,10 @@ namespace FikaAmazonAPI.AmazonSpApiSDK.Models.FulfillmentInbound
 
 
                [EnumMember(Value = "CREATING")]
-        CREATING = 11
+        CREATING = 11,
+
+               [EnumMember(Value = "READY_TO_SHIP")]
+        READY_TO_SHIP = 12
     }
 
 }
