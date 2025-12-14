@@ -2,6 +2,7 @@
 using FikaAmazonAPI.Parameter.Order;
 using FikaAmazonAPI.Search;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace FikaAmazonAPI.Services
@@ -45,6 +46,8 @@ namespace FikaAmazonAPI.Services
                     if (PageCount >= searchOrderList.MaxNumberOfPages.Value)
                         break;
                 }
+
+
             }
             return orderList;
         }
