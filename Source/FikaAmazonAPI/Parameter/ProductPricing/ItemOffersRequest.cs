@@ -37,14 +37,14 @@ namespace FikaAmazonAPI.Parameter.ProductPricing
         ///// <summary>
         ///// A marketplace identifier. Specifies the marketplace for which prices are returned.
         ///// </summary>
-        //[DataMember(Name = "MarketplaceId")]
-        //public string MarketplaceId { get; set; }
+        [DataMember(Name = "MarketplaceId")]
+        public string MarketplaceId { get; set; }
 
-        //[DataMember(Name = "ItemCondition")]
-        //public ItemCondition ItemCondition { get; set; }
+        [DataMember(Name = "ItemCondition")]
+        public ItemCondition ItemCondition { get; set; }
 
-        //[DataMember(Name = "CustomerType")]
-        //public CustomerType? CustomerType { get; set; }
+        [DataMember(Name = "CustomerType")]
+        public CustomerType? CustomerType { get; set; }
 
         //[JsonIgnore]
         //public string Asin { get; set; }

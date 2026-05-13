@@ -6,6 +6,8 @@ namespace FikaAmazonAPI.Parameter.ProductPricing
 {
     public class ParameterGetItemOffers : ParameterBased
     {
+
+        [JsonProperty("MarketplaceId")]
         public string MarketplaceId { get; set; }
         
         [JsonIgnore]
